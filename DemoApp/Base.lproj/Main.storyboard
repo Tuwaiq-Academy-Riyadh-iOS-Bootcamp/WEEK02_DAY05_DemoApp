@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pxm-7L-Rkg">
+                                <rect key="frame" x="117" y="187" width="180" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="pxc-9m-wJM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNM-hT-93W">
+                                <rect key="frame" x="124" y="458" width="180" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="PU0-LO-ZNy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Click Me"/>
+                                <connections>
+                                    <action selector="greetTheGuest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lIg-dQ-Z2W"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Guest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYs-rk-wYo">
+                                <rect key="frame" x="8" y="108" width="398" height="47"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="36"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="200" image="think" translatesAutoresizingMaskIntoConstraints="NO" id="XDD-OL-YzF">
+                                <rect key="frame" x="8" y="316" width="398" height="514"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XDD-OL-YzF" secondAttribute="bottom" constant="32" id="2mv-2o-aRQ"/>
+                            <constraint firstItem="XDD-OL-YzF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="3fF-ES-Abq"/>
+                            <constraint firstItem="iNM-hT-93W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C8m-0C-jcb"/>
+                            <constraint firstItem="pxm-7L-Rkg" firstAttribute="top" secondItem="BYs-rk-wYo" secondAttribute="bottom" constant="32" id="LkB-lH-5NU"/>
+                            <constraint firstItem="BYs-rk-wYo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="N0Q-6F-MWg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BYs-rk-wYo" secondAttribute="trailing" constant="8" id="NMr-NU-VHc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XDD-OL-YzF" secondAttribute="trailing" constant="8" id="heI-cy-SqV"/>
+                            <constraint firstItem="BYs-rk-wYo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="pVg-j8-t4j"/>
+                            <constraint firstItem="pxm-7L-Rkg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uiX-tX-gtI"/>
+                            <constraint firstItem="iNM-hT-93W" firstAttribute="top" secondItem="pxm-7L-Rkg" secondAttribute="bottom" constant="32" id="yZ6-5V-MP6"/>
+                            <constraint firstItem="XDD-OL-YzF" firstAttribute="top" secondItem="iNM-hT-93W" secondAttribute="bottom" constant="32" id="zte-ek-3QU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ivImage" destination="XDD-OL-YzF" id="EZ0-Pc-Omc"/>
+                        <outlet property="lbMessage" destination="BYs-rk-wYo" id="jIj-mF-0tr"/>
+                        <outlet property="tfName" destination="pxm-7L-Rkg" id="dyO-XG-0mf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="40.848214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="think" width="408" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
